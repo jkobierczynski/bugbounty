@@ -76,16 +76,13 @@ then
 else	
 	if [ ! -z $USERAGENT ]; 
 	then
-		echo "gospider --user-agent $USERAGENT -k 1 -c 1 -S $DIR/httpx-live-$DOMAIN-$DATE.txt -o $DIR/gospider-$DOMAIN-$DATE -d 1"
-		gospider --user-agent $USERAGENT -k 1 -c 1 -S $DIR/httpx-live-$DOMAIN-$DATE.txt -o $DIR/gospider-$DOMAIN-$DATE -d 1
+		echo "gospider --user-agent $USERAGENT -k 1 -c 1 -S $DIR/httpx-live-$DOMAIN-$DATE.txt -o $DIR/gospider-$DATE -d 1"
+		gospider --user-agent $USERAGENT -k 1 -c 1 -S $DIR/httpx-live-$DOMAIN-$DATE.txt -o $DIR/gospider-$DATE -d 1
 	fi
 
 	if [ ! -z "$HEADER" ];
 	then
-		echo "gospider -H \"$HEADER\" -k 1 -c 1 -S $DIR/httpx-live-$DOMAIN-$DATE.txt -o $DIR/gospider-$DOMAIN-$DATE -d 1"
-		gospider -H "$HEADER" -k 1 -c 1 -S $DIR/httpx-live-$DOMAIN-$DATE.txt -o $DIR/gospider-$DOMAIN-$DATE -d 1
+		echo "gospider -H \"$HEADER\" -k 1 -c 1 -S $DIR/httpx-live-$DOMAIN-$DATE.txt -o $DIR/gospider-$DATE -d 1"
+		gospider -H "$HEADER" -k 1 -c 1 -S $DIR/httpx-live-$DOMAIN-$DATE.txt -o $DIR/gospider-$DATE -d 1
 	fi
 fi
-
-#gospider --user-agent $USERAGENT -k 1 -c 1 -S $DIR/httpx-live-$DOMAIN-$DATE.txt -o $DIR/gospider-$DOMAIN-$DATE -d 1
-
